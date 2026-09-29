@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  validate:
+    name: Validate HTML & check links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install html-validate
+        run: npm install -g html-validate
+
+      - name: Validate HTML
+        # Runs only when index.html exists; skips gracefully on tokens-only commits
+        run: |
+          if [ -f index.html ]; then
+            html-validate index.html
+          else
+            echo "index.html not yet present — skipping HTML validation"
+          fi
+
+      - name: Check tokens.css exists
+        run: |
+          test -f tokens.css && echo "tokens.css present ✓" || (echo "tokens.css missing" && exit 1)
+
+      - name: Check DESIGN.md exists
+        run: |
+          test -f DESIGN.md && echo "DESIGN.md present ✓" || (echo "DESIGN.md missing" && exit 1)
