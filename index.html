@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Claire is an always-on AI workforce that connects your tools and runs coordinated agents from your menu bar — so work ships while you sleep."
+    />
+    <title>Claire — Your always-on AI workforce</title>
+
+    <!-- Design tokens (S-2) -->
+    <link rel="stylesheet" href="/tokens.css" />
+
+    <!-- Component styles (S-4) -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Inter variable font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ── HEADER / NAV ───────────────────────────────────────────────── -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="#" aria-label="Claire home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-1 8 4 4 0 0 1-6 0 4 4 0 0 1-1-8V6a4 4 0 0 1 4-4Z" />
+              <path d="M9 13a3 3 0 0 0 6 0" />
+            </svg>
+          </span>
+          <span class="brand__name">Claire</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a class="site-nav__link" href="#features">Features</a>
+          <a class="site-nav__link" href="#how">How it works</a>
+          <a class="site-nav__link" href="#cta">Pricing</a>
+        </nav>
+
+        <a class="btn btn--ghost site-header__cta" href="#cta">Book a demo</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ── HERO ─────────────────────────────────────────────────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__mesh" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <p class="eyebrow">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            AI workforce · always on
+          </p>
+
+          <h1 id="hero-title" class="hero__title">
+            Your AI workforce,<br />
+            <span class="hero__title-accent">shipping while you sleep.</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            Claire connects the tools you already run, coordinates a team of
+            agents to do the work end to end, and lives in your menu bar —
+            ready the moment you are.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#cta">Start free trial</a>
+            <a class="btn btn--secondary btn--lg" href="#how">
+              See how it works
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <p class="hero__note">No credit card required · Deploys in minutes</p>
+        </div>
+      </section>
+
+      <!-- ── FEATURES ─────────────────────────────────────────────────── -->
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <div class="section__head">
+            <p class="eyebrow eyebrow--muted">What Claire does</p>
+            <h2 id="features-title" class="section__title">
+              One workforce. Every tool. Zero handoffs.
+            </h2>
+            <p class="section__lead">
+              Claire is built to sit inside how your team already works —
+              not to replace it.
+            </p>
+          </div>
+
+          <ul class="feature-grid">
+            <li class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg>
+              </span>
+              <h3 class="feature-card__title">Connects your tools</h3>
+              <p class="feature-card__body">
+                Slack, GitHub, your calendar, your CRM, your files. Claire plugs
+                into the stack you already run and works across all of it — no
+                migration, no rip-and-replace.
+              </p>
+            </li>
+
+            <li class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="5" r="2.5" />
+                  <circle cx="5" cy="18" r="2.5" />
+                  <circle cx="19" cy="18" r="2.5" />
+                  <path d="M12 7.5v3M10 12l-3.5 3.8M14 12l3.5 3.8" />
+                </svg>
+              </span>
+              <h3 class="feature-card__title">Coordinated agents</h3>
+              <p class="feature-card__body">
+                Not one bot answering one question — a team of specialised agents
+                that hand work off to each other, track state, and finish the job
+                end to end while you focus on what matters.
+              </p>
+            </li>
+
+            <li class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M3 9h18" />
+                  <circle cx="7" cy="6" r="1" />
+                  <circle cx="11" cy="6" r="1" />
+                </svg>
+              </span>
+              <h3 class="feature-card__title">Always-on menu bar</h3>
+              <p class="feature-card__body">
+                Claire lives in your menu bar. Delegate a task in seconds, get a
+                notification when it's done. No dashboard to open, no context to
+                rebuild — just results.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── HOW IT WORKS ──────────────────────────────────────────────── -->
+      <section class="section section--alt" id="how" aria-labelledby="how-title">
+        <div class="container">
+          <div class="section__head">
+            <p class="eyebrow eyebrow--muted">How it works</p>
+            <h2 id="how-title" class="section__title">Live in three steps.</h2>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step__number" aria-hidden="true">01</span>
+              <div class="step__body">
+                <h3 class="step__title">Connect</h3>
+                <p class="step__desc">
+                  Authorise the tools you use. Claire reads your context — open
+                  PRs, calendar, inbox, tickets — and builds a live model of
+                  your work.
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__number" aria-hidden="true">02</span>
+              <div class="step__body">
+                <h3 class="step__title">Delegate</h3>
+                <p class="step__desc">
+                  Type what you need — or just describe the outcome. Claire
+                  breaks it into tasks, assigns the right agents, and starts
+                  working immediately.
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__number" aria-hidden="true">03</span>
+              <div class="step__body">
+                <h3 class="step__title">Ship</h3>
+                <p class="step__desc">
+                  Review the result, approve, and it's done. PRs merged, emails
+                  sent, reports filed. Claire handles the last mile so you don't
+                  have to.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ── CTA BAND ──────────────────────────────────────────────────── -->
+      <section class="cta-band" id="cta" aria-labelledby="cta-title">
+        <div class="container cta-band__inner">
+          <h2 id="cta-title" class="cta-band__title">
+            Ready to ship faster?
+          </h2>
+          <p class="cta-band__sub">
+            Join the teams already running Claire. Free trial, no credit card,
+            deploys in minutes.
+          </p>
+          <div class="cta-band__actions">
+            <a class="btn btn--on-dark btn--lg" href="#">Start free trial</a>
+            <a class="btn btn--outline-light btn--lg" href="#">Book a demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── FOOTER ────────────────────────────────────────────────────── -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="brand" href="#" aria-label="Claire home">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-1 8 4 4 0 0 1-6 0 4 4 0 0 1-1-8V6a4 4 0 0 1 4-4Z" />
+                <path d="M9 13a3 3 0 0 0 6 0" />
+              </svg>
+            </span>
+            <span class="brand__name">Claire</span>
+          </a>
+          <p class="site-footer__tagline">Your always-on AI workforce.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer">
+          <div class="footer-col">
+            <h3 class="footer-col__title">Product</h3>
+            <a class="footer-col__link" href="#features">Features</a>
+            <a class="footer-col__link" href="#how">How it works</a>
+            <a class="footer-col__link" href="#cta">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col__title">Company</h3>
+            <a class="footer-col__link" href="#">About</a>
+            <a class="footer-col__link" href="#">Careers</a>
+            <a class="footer-col__link" href="#">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col__title">Legal</h3>
+            <a class="footer-col__link" href="#">Privacy</a>
+            <a class="footer-col__link" href="#">Terms</a>
+            <a class="footer-col__link" href="#">Security</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container site-footer__bar">
+        <p class="site-footer__copy">© 2026 Cirruslabs. All rights reserved.</p>
+        <p class="site-footer__made">Built with Claire.</p>
+      </div>
+    </footer>
+  </body>
+</html>

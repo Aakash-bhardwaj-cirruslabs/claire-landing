@@ -7,35 +7,32 @@ on:
     branches: ["**"]
 
 jobs:
-  validate:
-    name: Validate HTML & check links
+  build:
+    name: Lint & Build
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
+      - name: Set up Node 20
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
 
-      - name: Install html-validate
-        run: npm install -g html-validate
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Validate HTML
-        # Runs only when index.html exists; skips gracefully on tokens-only commits
-        run: |
-          if [ -f index.html ]; then
-            html-validate index.html
-          else
-            echo "index.html not yet present — skipping HTML validation"
-          fi
+      - name: Lint
+        run: npm run lint
 
-      - name: Check tokens.css exists
-        run: |
-          test -f tokens.css && echo "tokens.css present ✓" || (echo "tokens.css missing" && exit 1)
+      - name: Build
+        run: npm run build
 
-      - name: Check DESIGN.md exists
-        run: |
-          test -f DESIGN.md && echo "DESIGN.md present ✓" || (echo "DESIGN.md missing" && exit 1)
+      - name: Upload dist artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 7
